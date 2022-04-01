@@ -6,6 +6,7 @@ import { css } from "@emotion/css";
 import Navbar from "../../components/Navbar/Navbar";
 import Search from "../../components/Search/Search";
 import Dock from "../../components/Dock/Dock";
+import TabView from "../../layouts/TabView/TabView";
 
 function Home() {
   const containerCss = css({
@@ -28,6 +29,7 @@ function Home() {
         <span className={spanTitle}>Museums Virtually</span>
       </h1>
       <Search />
+      <TabView />
       <Dock />
     </div>
   );

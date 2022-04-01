@@ -15,7 +15,7 @@ const Slideshow = (props) => {
   const slideshow = css({});
 
   return (
-    <div>
+    <div className={slideshow} id="slideshow">
       {content.map((item, i) => (
         <Item index={i}>{item}</Item>
       ))}

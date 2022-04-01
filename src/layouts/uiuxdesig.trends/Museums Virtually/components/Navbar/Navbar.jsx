@@ -11,7 +11,7 @@ const Navbar = () => {
     background: "none",
     fontSize: 15,
     color: "#626262",
-    padding: 10,
+    padding: "10px 0 10px 10px",
     marginTop: 5,
     cursor: "pointer",
   });
@@ -32,7 +32,7 @@ const Navbar = () => {
     background: "none",
     fontSize: 20,
     color: "#626262",
-    padding: 10,
+    padding: "10px 10px 10px 0",
     cursor: "pointer",
     marginTop: 5,
   });

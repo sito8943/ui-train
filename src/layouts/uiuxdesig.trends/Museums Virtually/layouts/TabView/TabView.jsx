@@ -27,7 +27,7 @@ const TabView = (props) => {
 
   return (
     <div>
-      <div className={`${tabsContainerCss}`}>
+      <div className={`${tabsContainerCss} tab-container`}>
         {tabs.map((item, i) => (
           <Tab
             index={i}

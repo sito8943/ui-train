@@ -1,11 +1,4 @@
-/*.tab-container::-webkit-scrollbar {
-  display: none;
-}*/
-.tab-container::-webkit-scrollbar-thumb :hover {
-  background: rgba(238, 244, 247);
-  border-radius: 4px;
-}
 .tab-container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  background: transparent;
 }

@@ -8,6 +8,9 @@ import Search from "../../components/Search/Search";
 import Dock from "../../components/Dock/Dock";
 import TabView from "../../layouts/TabView/TabView";
 
+const tabs = ["Popular", "For You", "India", "China", "Japan"];
+const content = [<h1>Hola</h1>, <h1>Adiós</h1>];
+
 function Home() {
   const containerCss = css({
     width: 320,
@@ -29,7 +32,7 @@ function Home() {
         <span className={spanTitle}>Museums Virtually</span>
       </h1>
       <Search />
-      <TabView />
+      <TabView tabs={tabs} content={content} />
       <Dock />
     </div>
   );

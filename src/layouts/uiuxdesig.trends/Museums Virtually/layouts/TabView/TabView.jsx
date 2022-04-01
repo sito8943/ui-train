@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// prop-types
+import PropTypes from "prop-types";
+
 // emotion
 import { css } from "@emotion/css";
 
@@ -9,12 +12,12 @@ import Tab from "./Tab/Tab";
 // styles
 import "./style.css";
 
-const tabs = ["Popular", "For You", "India", "China", "Japan"];
+const TabView = (props) => {
+  const { tabs, content } = props;
 
-const TabView = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
 
-  const containerCss = css({
+  const tabsContainerCss = css({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -24,7 +27,7 @@ const TabView = () => {
 
   return (
     <div>
-      <div className={`${containerCss} tab-container`}>
+      <div className={`${tabsContainerCss}`}>
         {tabs.map((item, i) => (
           <Tab
             index={i}
@@ -35,8 +38,14 @@ const TabView = () => {
           />
         ))}
       </div>
+      <div>{content[active]}</div>
     </div>
   );
+};
+
+TabView.propTypes = {
+  tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  content: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default TabView;

@@ -42,6 +42,9 @@ const ImageCard = (props) => {
     zIndex: 1,
     height: 42,
     cursor: "pointer",
+    "&:hover": {
+      background: "#abaaaa",
+    },
   });
 
   const vrButton = css({

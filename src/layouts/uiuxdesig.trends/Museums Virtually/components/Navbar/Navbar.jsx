@@ -12,9 +12,13 @@ const Navbar = () => {
     background: "none",
     fontSize: 15,
     color: "#626262",
-    padding: "10px 0 10px 10px",
+    padding: "10px",
     marginTop: 5,
     cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#e3e3e3",
+    },
+    height: 37,
   });
 
   const textListCss = css({
@@ -38,7 +42,7 @@ const Navbar = () => {
     marginTop: 5,
     height: 37,
     "&:hover": {
-      background: "#e3e3e3",
+      backgroundColor: "#e3e3e3",
     },
   });
 
@@ -51,7 +55,7 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "85%",
+    width: "90%",
   });
 
   return (

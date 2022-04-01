@@ -5,6 +5,7 @@ import { css } from "@emotion/css";
 // components
 import Navbar from "../../components/Navbar/Navbar";
 import Search from "../../components/Search/Search";
+import Dock from "../../components/Dock/Dock";
 
 function Home() {
   const containerCss = css({
@@ -27,6 +28,7 @@ function Home() {
         <span className={spanTitle}>Museums Virtually</span>
       </h1>
       <Search />
+      <Dock />
     </div>
   );
 }

@@ -26,7 +26,7 @@ const Tab = (props) => {
   return (
     <button
       id={`t${index}`}
-      action={action}
+      onClick={action}
       className={`${buttonTextCss} ${active ? activeButton : ""}`}
     >
       {text}

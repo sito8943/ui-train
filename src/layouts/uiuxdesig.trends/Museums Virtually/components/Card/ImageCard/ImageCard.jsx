@@ -18,6 +18,12 @@ import "./style.css";
 const ImageCard = (props) => {
   const { title, noMarker, src } = props;
 
+  const [toggle, setToggle] = useState(false);
+
+  const toggleMarker = () => {
+    setToggle(!toggle);
+  };
+
   const titleArea = css({
     display: "flex",
     alignItems: "center",
@@ -35,6 +41,7 @@ const ImageCard = (props) => {
     borderRadius: 5,
     zIndex: 1,
     height: 42,
+    cursor: "pointer",
   });
 
   const vrButton = css({
@@ -42,21 +49,25 @@ const ImageCard = (props) => {
     fontWeight: 700,
     background: "none",
     border: "none",
+    cursor: "pointer",
   });
 
   const vrHr = css({
     margin: "0 10px",
     height: "90%",
     borderColor: "#f0f8ff5e",
+    cursor: "pointer",
   });
 
   const starSpan = css({
     color: "aliceblue",
     display: "flex",
+    cursor: "pointer",
   });
 
   const vrStarIcon = css({
     marginLeft: "7px",
+    cursor: "pointer",
   });
 
   const imageCardCss = css({
@@ -77,14 +88,18 @@ const ImageCard = (props) => {
     height: 37,
   });
 
+  const markerShadow = css({
+    boxShadow: "0 0 25px 0",
+  });
+
   return (
     <div className={`${imageCardCss} image-card`}>
       <ImageShimmer width={285} height={285} src={src} />
       <div className={titleArea}>
         <h4>{title}</h4>
         {!noMarker && (
-          <button className={markerButton}>
-            <BsBookmarkDash />
+          <button className={markerButton} onClick={() => toggleMarker()}>
+            <BsBookmarkDash className={`${toggle ? markerShadow : ""}`} />
           </button>
         )}
       </div>

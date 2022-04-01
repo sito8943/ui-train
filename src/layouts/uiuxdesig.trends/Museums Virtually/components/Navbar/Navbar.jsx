@@ -33,9 +33,13 @@ const Navbar = () => {
     background: "none",
     fontSize: 20,
     color: "#626262",
-    padding: "10px 10px 10px 0",
+    padding: "10",
     cursor: "pointer",
     marginTop: 5,
+    height: 37,
+    "&:hover": {
+      background: "#e3e3e3",
+    },
   });
 
   const spanCss = css({
@@ -47,7 +51,7 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "100%",
+    width: "85%",
   });
 
   return (

@@ -14,7 +14,7 @@ const Dock = () => {
     justifyContent: "space-between",
     alignItems: "center",
     padding: 15,
-    width: "100%",
+    width: "85%",
   });
 
   const buttonCss = css({

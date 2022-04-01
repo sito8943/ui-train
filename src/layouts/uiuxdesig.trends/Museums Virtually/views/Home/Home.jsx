@@ -15,14 +15,21 @@ const content = [
     title="Louvre Museum Paris"
     src="http://localhost:3000/static/media/curved0.9855535d.jpg"
   />,
-  <h1>Adiós</h1>,
+  <ImageCard
+    title="Louvre Museum Paris"
+    src="http://localhost:3000/static/media/home-decor-1.05e218fd.jpg"
+  />,
+  <ImageCard
+    title="Louvre Museum Paris"
+    src="http://localhost:3000/static/media/home-decor-2.b4e5397c.jpg"
+  />,
 ];
 
 function Home() {
   const containerCss = css({
-    width: 320,
-    height: 640,
-    padding: "10px 20px",
+    width: 350,
+    height: 675,
+    padding: "10px 0",
     background: "#f5f3f3",
     boxShadow: "12px 9px 24px -9px",
     display: "flex",
@@ -37,7 +44,7 @@ function Home() {
   return (
     <div className={containerCss}>
       <Navbar />
-      <h1>
+      <h1 style={{ width: "85%" }}>
         Visit your most favorite{" "}
         <span className={spanTitle}>Museums Virtually</span>
       </h1>

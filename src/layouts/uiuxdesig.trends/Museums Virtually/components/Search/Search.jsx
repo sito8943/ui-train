@@ -41,7 +41,7 @@ const Search = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "100%",
+    width: "85%",
   });
 
   return (

@@ -26,7 +26,7 @@ const TabView = (props) => {
   });
 
   const tabContainer = css({
-    width: "100%",
+    width: "85%",
   });
 
   return (

@@ -21,12 +21,16 @@ const TabView = (props) => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 15,
+    padding: "15px 0",
     overflow: "auto",
   });
 
+  const tabContainer = css({
+    width: "100%",
+  });
+
   return (
-    <div>
+    <div className={tabContainer}>
       <div className={`${tabsContainerCss} tab-container`}>
         {tabs.map((item, i) => (
           <Tab

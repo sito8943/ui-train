@@ -7,9 +7,16 @@ import Navbar from "../../components/Navbar/Navbar";
 import Search from "../../components/Search/Search";
 import Dock from "../../components/Dock/Dock";
 import TabView from "../../layouts/TabView/TabView";
+import ImageCard from "../../components/Card/ImageCard/ImageCard";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
-const content = [<h1>Hola</h1>, <h1>Adiós</h1>];
+const content = [
+  <ImageCard
+    title="Louvre Museum Paris"
+    src="http://localhost:3000/static/media/curved0.9855535d.jpg"
+  />,
+  <h1>Adiós</h1>,
+];
 
 function Home() {
   const containerCss = css({
@@ -18,6 +25,9 @@ function Home() {
     padding: "10px 20px",
     background: "#f5f3f3",
     boxShadow: "12px 9px 24px -9px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   });
 
   const spanTitle = css({

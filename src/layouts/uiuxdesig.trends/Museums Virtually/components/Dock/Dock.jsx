@@ -14,6 +14,7 @@ const Dock = () => {
     justifyContent: "space-between",
     alignItems: "center",
     padding: 15,
+    width: "100%",
   });
 
   const buttonCss = css({
@@ -23,6 +24,7 @@ const Dock = () => {
     fontSize: 18,
     background: "none",
     cursor: "pointer",
+    height: 37,
   });
 
   const activeButton = css({

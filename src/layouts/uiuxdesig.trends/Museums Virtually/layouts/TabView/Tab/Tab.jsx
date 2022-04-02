@@ -20,7 +20,7 @@ const Tab = (props) => {
   });
 
   const activeButton = css({
-    background: "#dddbdb !important",
+    background: "#e9e5e5 !important",
   });
 
   return (

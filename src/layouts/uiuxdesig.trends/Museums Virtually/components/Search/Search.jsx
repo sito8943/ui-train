@@ -37,7 +37,7 @@ const Search = () => {
   });
 
   const containerCss = css({
-    background: "#dfdada",
+    background: "#e9e5e5",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",

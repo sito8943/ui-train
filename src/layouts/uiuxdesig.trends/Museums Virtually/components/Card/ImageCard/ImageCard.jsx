@@ -91,11 +91,15 @@ const ImageCard = (props) => {
   const markerButton = css({
     border: "none",
     color: "aliceblue",
-    padding: 10,
+    padding: 5,
     fontSize: 18,
-    background: "#bdbbbb",
+    background: "#787676",
     cursor: "pointer",
-    height: 37,
+    height: 29,
+  });
+
+  const titleCss = css({
+    color: "aliceblue",
   });
 
   const markerShadow = css({
@@ -106,7 +110,7 @@ const ImageCard = (props) => {
     <div className={`${imageCardCss} image-card`}>
       {/*<ImageShimmer width={285} height={285} src={src} />*/}
       <div className={titleArea}>
-        <h4>{title}</h4>
+        <h4 className={titleCss}>{title}</h4>
         {!noMarker && (
           <button className={markerButton} onClick={() => toggleMarker()}>
             <BsBookmarkDash className={`${toggle ? markerShadow : ""}`} />

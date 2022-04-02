@@ -53,8 +53,6 @@ const vrStarIcon = css({
 });
 
 const imageCardCss = css({
-  height: 270,
-  width: 285,
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -62,8 +60,11 @@ const imageCardCss = css({
   backgroundPosition: "center",
   backgroundSize: "cover",
   borderRadius: 15,
-  boxShadow: "0px 15px 50px -20px",
   margin: "auto",
+});
+
+const cardShadow = css({
+  boxShadow: "0px 15px 50px -20px",
 });
 
 const markerButton = css({
@@ -85,6 +86,7 @@ const markerShadow = css({
 });
 
 export {
+  cardShadow,
   titleArea,
   vrArea,
   vrButton,

@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // styles
-import { mobileContainer } from "./style";
+import { mobileContainer } from "./styles";
 
 const Container = (props) => {
   const { children } = props;

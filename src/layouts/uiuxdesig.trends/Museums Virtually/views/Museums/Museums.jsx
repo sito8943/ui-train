@@ -8,6 +8,7 @@ import Dock from "../../components/Dock/Dock";
 import TabView from "../../layouts/TabView/TabView";
 import Slideshow from "../../layouts/Slideshow/Slideshow";
 import Mobile from "../../layouts/Mobile/Mobile";
+import Container from "../../layouts/Mobile/Container/Container";
 
 // images
 import img1 from "../../../../../assets/images/img1.jpg";
@@ -22,26 +23,40 @@ import {
   titleArea as imageCardTitleArea,
   vrStarIcon,
 } from "../../components/Card/ImageCard/styles";
-import { titleArea, titleCss, starSpan } from "./styles";
-import Container from "../../layouts/Mobile/Container/Container";
+import {
+  titleArea,
+  titleCss,
+  starSpan,
+  smallItemSpan,
+  smallItemContainer,
+} from "./styles";
 
 const tabs = ["Exhibitions", "Highlights", "Guided Tours", "Artworks"];
 
 const slideContent = [
-  <ImageCard title="Louvre Museum Paris" src={img1} />,
-  <ImageCard title="Louvre Museum Paris" src={img2} />,
-  <ImageCard title="Louvre Museum Paris" src={img3} />,
+  <ImageCard noTitle src={img1} />,
+  <ImageCard noTitle src={img2} />,
+  <ImageCard noTitle src={img3} />,
 ];
+
 const smallContent = [
-  <h1>Hola</h1>,
-  <h1>Mundo</h1>,
-  <h1>Mom</h1>,
-  <h1>Text</h1>,
+  <div className={smallItemContainer}>
+    <ImageCard noTitle noButton noShadow src={img1} width={130} height={100} />
+    <span className={smallItemSpan}>History of Louvre</span>
+  </div>,
+  <div className={smallItemContainer}>
+    <ImageCard noTitle noButton noShadow src={img2} width={130} height={100} />
+    <span className={smallItemSpan}>Recent Additions</span>
+  </div>,
+  <div className={smallItemContainer}>
+    <ImageCard noTitle noButton noShadow src={img3} width={130} height={100} />
+    <span className={smallItemSpan}>About the Museum</span>
+  </div>,
 ];
 const tabContent = [
-  <Slideshow content={slideContent} noMargin={true} />,
-  <Slideshow content={slideContent} noMargin={true} />,
-  <Slideshow content={slideContent} noMargin={true} />,
+  <Slideshow content={slideContent} noMargin />,
+  <Slideshow content={slideContent} noMargin />,
+  <Slideshow content={slideContent} noMargin />,
 ];
 
 const Museums = () => {
@@ -49,7 +64,7 @@ const Museums = () => {
     <Mobile>
       <MuseumNavbar />
       <Container>
-        <ImageCard title="Louvre Museum Paris" src={img1} stars={false} />
+        <ImageCard noTitle src={img1} noStars />
 
         <div className={`${titleArea} ${imageCardTitleArea}`}>
           <h4 className={titleCss}>Louvre Museum, Paris</h4>
@@ -63,15 +78,9 @@ const Museums = () => {
           }
         />
         <div>
-          <Slideshow small={true} content={smallContent} />
+          <Slideshow small content={smallContent} />
         </div>
-        <div>
-          <Slideshow small={true} content={smallContent} />
-        </div>
-        <div>
-          <Slideshow small={true} content={smallContent} />
-        </div>
-        {/*<TabView tabs={tabs} content={tabContent} />*/}
+        <TabView tabs={tabs} content={tabContent} />
       </Container>
       <Dock />
     </Mobile>

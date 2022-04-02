@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // styles
-import { item, middleCss, odd, even, startCss, endCss } from "./styles";
+import { item, middleCss, startCss, endCss, odd, even } from "./styles";
 
 const Item = (props) => {
   const { index, children, total, noMargin } = props;

@@ -26,12 +26,7 @@ const Slideshow = (props) => {
             {item}
           </Item>
         ) : (
-          <SmallItem
-            key={`item${i}`}
-            noMargin={noMargin}
-            index={i}
-            total={content.length}
-          >
+          <SmallItem key={`item${i}`} index={i} total={content.length}>
             {item}
           </SmallItem>
         );

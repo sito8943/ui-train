@@ -6,6 +6,15 @@ const titleArea = css({
   width: "80%",
 });
 
+const smallItemContainer = css({
+  display: "flex",
+  flexDirection: "column",
+});
+
+const smallItemSpan = css({
+  margin: "7px auto auto auto",
+});
+
 const starSpan = css({
   color: "#626262",
   display: "flex",
@@ -16,4 +25,4 @@ const titleCss = css({
   color: "#1d1d1d",
 });
 
-export { starSpan, titleCss, titleArea };
+export { starSpan, titleCss, titleArea, smallItemSpan, smallItemContainer };

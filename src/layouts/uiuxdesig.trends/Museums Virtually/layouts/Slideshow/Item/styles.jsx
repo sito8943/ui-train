@@ -14,11 +14,15 @@ const odd = css({
 });
 
 const startCss = css({
-  marginRight: 10,
+  margin: "0 25px  0 28px",
 });
 
 const middleCss = css({
-  margin: "0 10px",
+  marginRight: 25,
 });
 
-export { item, even, odd, startCss, middleCss };
+const endCss = css({
+  marginRight: 28,
+});
+
+export { item, even, odd, startCss, middleCss, endCss };

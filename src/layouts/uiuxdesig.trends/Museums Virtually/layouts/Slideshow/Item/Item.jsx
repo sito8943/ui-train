@@ -4,16 +4,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // styles
-import { item, middleCss, odd, even, startCss } from "./styles";
+import { item, middleCss, odd, even, startCss, endCss } from "./styles";
 
 const Item = (props) => {
-  const { index, children } = props;
+  const { index, children, total } = props;
 
   return (
     <div
-      className={`${item} ${index !== 0 ? middleCss : startCss} ${
-        index % 2 === 0 ? even : odd
-      }`}
+      className={`${item} ${index !== 0 && middleCss} ${
+        index === 0 && index < total - 1 && startCss
+      } 
+      ${index === total - 1 && endCss} ${index % 2 === 0 ? even : odd}`}
     >
       {children}
     </div>
@@ -22,6 +23,7 @@ const Item = (props) => {
 
 Item.propTypes = {
   index: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
 };
 

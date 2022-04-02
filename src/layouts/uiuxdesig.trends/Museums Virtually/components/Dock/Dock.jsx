@@ -1,36 +1,13 @@
 import React, { useState } from "react";
 
-// emotion
-import { css } from "@emotion/css";
-
 // icons
 import { BsBookmarkDash, BsHouse, BsPerson, BsWhatsapp } from "react-icons/bs";
 
+// styles
+import { containerCss, buttonCss, activeButton } from "./styles";
+
 const Dock = () => {
   const [active, setActive] = useState(1);
-
-  const containerCss = css({
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: 15,
-    marginTop: -10,
-    width: "85%",
-  });
-
-  const buttonCss = css({
-    border: "none",
-    color: "#9d9999",
-    padding: 10,
-    fontSize: 18,
-    background: "none",
-    cursor: "pointer",
-    height: 37,
-  });
-
-  const activeButton = css({
-    background: "#dddbdb !important",
-  });
 
   return (
     <div className={containerCss}>

@@ -17,6 +17,7 @@ import img3 from "../../../../../assets/images/img3.jpg";
 
 // styles
 import "./style.css";
+import { SeenProvider } from "../../context/SeenContext";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
 
@@ -59,17 +60,19 @@ function Home() {
 
   return (
     <div className={containerCss}>
-      <Navbar />
-      <div className={titleArea}>
-        <h2 className={titleCss}>
-          Visit your most favorite{" "}
-          <span className={spanTitle}>Museums Virtually</span>
-        </h2>
-      </div>
+      <SeenProvider>
+        <Navbar />
+        <div className={titleArea}>
+          <h2 className={titleCss}>
+            Visit your most favorite{" "}
+            <span className={spanTitle}>Museums Virtually</span>
+          </h2>
+        </div>
 
-      <Search />
-      <TabView tabs={tabs} content={tabContent} />
-      <Dock />
+        <Search />
+        <TabView tabs={tabs} content={tabContent} />
+        <Dock />
+      </SeenProvider>
     </div>
   );
 }

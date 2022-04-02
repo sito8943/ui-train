@@ -14,6 +14,7 @@ const Dock = () => {
     justifyContent: "space-between",
     alignItems: "center",
     padding: 15,
+    marginTop: -10,
     width: "85%",
   });
 

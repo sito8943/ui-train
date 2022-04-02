@@ -11,6 +11,7 @@ const containerCss = css({
   flexDirection: "column",
   alignItems: "center",
   margin: "0 50px",
+  overflow: "scroll",
 });
 
 export { containerCss };

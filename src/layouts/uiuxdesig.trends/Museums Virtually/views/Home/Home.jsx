@@ -37,10 +37,20 @@ function Home() {
     height: 675,
     padding: "10px 0",
     background: "#f5f3f3",
-    boxShadow: "12px 9px 24px -9px",
+    boxShadow: "55px 20px 88px 15px #00000070",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    margin: "0 50px",
+  });
+
+  const titleArea = css({
+    width: "100%",
+    marginLeft: 50,
+  });
+
+  const titleCss = css({
+    width: "69%",
   });
 
   const spanTitle = css({
@@ -50,8 +60,8 @@ function Home() {
   return (
     <div className={containerCss}>
       <Navbar />
-      <div style={{ width: "100%", marginLeft: 50 }}>
-        <h2 style={{ width: "69%" }}>
+      <div className={titleArea}>
+        <h2 className={titleCss}>
           Visit your most favorite{" "}
           <span className={spanTitle}>Museums Virtually</span>
         </h2>

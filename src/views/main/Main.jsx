@@ -11,6 +11,7 @@ const Main = () => {
       }}
     >
       <Home />
+      <Home />
     </div>
   );
 };

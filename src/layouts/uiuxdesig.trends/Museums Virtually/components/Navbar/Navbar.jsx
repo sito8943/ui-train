@@ -1,16 +1,7 @@
 import React from "react";
 
 // icons
-import {
-  BsList,
-  BsBell,
-  BsChevronDown,
-  BsChevronLeft,
-  BsBookmarkDash,
-} from "react-icons/bs";
-
-// context
-import { useSeen } from "../../context/SeenContext";
+import { BsList, BsBell, BsChevronDown } from "react-icons/bs";
 
 // styles
 import {
@@ -22,38 +13,20 @@ import {
 } from "./styles";
 
 const Navbar = () => {
-  const { seenState, setSeenState } = useSeen();
-
   return (
     <div className={container}>
-      {!seenState.seen ? (
-        <>
-          <button onClick={null} className={drawerButton}>
-            <BsList />
-          </button>
-          <button onClick={null} className={textListCss}>
-            Europe
-            <span className={spanCss}>
-              <BsChevronDown />
-            </span>
-          </button>
-          <button onClick={null} className={notificationCss}>
-            <BsBell />
-          </button>
-        </>
-      ) : (
-        <>
-          <button
-            onClick={() => setSeenState({ type: "toggle" })}
-            className={notificationCss}
-          >
-            <BsChevronLeft />
-          </button>
-          <button onClick={null} className={notificationCss}>
-            <BsBookmarkDash />
-          </button>
-        </>
-      )}
+      <button onClick={null} className={drawerButton}>
+        <BsList />
+      </button>
+      <button onClick={null} className={textListCss}>
+        Europe
+        <span className={spanCss}>
+          <BsChevronDown />
+        </span>
+      </button>
+      <button onClick={null} className={notificationCss}>
+        <BsBell />
+      </button>
     </div>
   );
 };

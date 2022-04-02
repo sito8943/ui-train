@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className={container}>
-      {seenState.seen ? (
+      {!seenState.seen ? (
         <>
           <button onClick={null} className={drawerButton}>
             <BsList />

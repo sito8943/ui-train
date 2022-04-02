@@ -3,33 +3,16 @@ import React, { useState } from "react";
 // prop-types
 import PropTypes from "prop-types";
 
-// emotion
-import { css } from "@emotion/css";
-
 // components
 import Tab from "./Tab/Tab";
 
 // styles
-import "./style.css";
+import { tabContainer, tabsContainerCss } from "./style";
 
 const TabView = (props) => {
   const { tabs, content } = props;
 
   const [active, setActive] = useState(0);
-
-  const tabsContainerCss = css({
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "15px 0 0px 0px",
-    overflow: "auto",
-    width: "85%",
-    margin: "auto",
-  });
-
-  const tabContainer = css({
-    width: "100%",
-  });
 
   return (
     <div className={tabContainer}>

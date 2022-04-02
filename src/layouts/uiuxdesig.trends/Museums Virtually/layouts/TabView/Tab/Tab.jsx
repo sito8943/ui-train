@@ -3,25 +3,11 @@ import React from "react";
 // prop-types
 import PropTypes from "prop-types";
 
-// emotion
-import { css } from "@emotion/css";
+// styles
+import { buttonTextCss, activeButton } from "./styles";
 
 const Tab = (props) => {
   const { index, text, action, active } = props;
-
-  const buttonTextCss = css({
-    minWidth: 100,
-    border: "none",
-    color: "#9d9999",
-    padding: 10,
-    fontSize: 15,
-    background: "none",
-    cursor: "pointer",
-  });
-
-  const activeButton = css({
-    background: "#e9e5e5 !important",
-  });
 
   return (
     <button

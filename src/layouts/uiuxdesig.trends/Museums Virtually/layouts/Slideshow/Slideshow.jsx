@@ -12,7 +12,10 @@ import Item from "./Item/Item";
 const Slideshow = (props) => {
   const { content } = props;
 
-  const slideshow = css({});
+  const slideshow = css({
+    display: "flex",
+    overflowX: "scroll",
+  });
 
   return (
     <div className={slideshow} id="slideshow">

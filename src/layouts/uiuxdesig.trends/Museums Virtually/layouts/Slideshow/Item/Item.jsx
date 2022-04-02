@@ -9,7 +9,9 @@ import { css } from "@emotion/css";
 const Item = (props) => {
   const { index, children } = props;
 
-  const item = css({});
+  const item = css({
+    height: 310,
+  });
 
   const even = css({
     marginTop: 10,

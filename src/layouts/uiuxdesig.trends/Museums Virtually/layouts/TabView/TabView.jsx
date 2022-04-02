@@ -21,7 +21,7 @@ const TabView = (props) => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "15px 0",
+    padding: "15px 0 0px 0px",
     overflow: "auto",
   });
 

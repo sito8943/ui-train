@@ -6,11 +6,16 @@ import PropTypes from "prop-types";
 // components
 import Item from "./Item/Item";
 
+// context
+import { useSeen } from "../../context/SeenContext";
+
 // styles
 import { container, slideshow, span } from "./styles";
 
 const Slideshow = (props) => {
   const { content } = props;
+
+  const { setSeenState } = useSeen();
 
   return (
     <div className={container}>
@@ -21,7 +26,9 @@ const Slideshow = (props) => {
           </Item>
         ))}
       </div>
-      <span className={span}>Show all</span>
+      <span className={span} onClick={() => setSeenState({ type: "toggle" })}>
+        Show all
+      </span>
     </div>
   );
 };

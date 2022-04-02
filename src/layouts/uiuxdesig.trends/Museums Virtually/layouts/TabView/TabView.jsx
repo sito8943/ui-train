@@ -23,10 +23,12 @@ const TabView = (props) => {
     alignItems: "center",
     padding: "15px 0 0px 0px",
     overflow: "auto",
+    width: "85%",
+    margin: "auto",
   });
 
   const tabContainer = css({
-    width: "85%",
+    width: "100%",
   });
 
   return (

@@ -8,12 +8,15 @@ import Search from "../../components/Search/Search";
 import Dock from "../../components/Dock/Dock";
 import TabView from "../../layouts/TabView/TabView";
 import ImageCard from "../../components/Card/ImageCard/ImageCard";
+import Slideshow from "../../layouts/Slideshow/Slideshow";
 
 // images
 import img1 from "../../../../../assets/images/img1.jpg";
 import img2 from "../../../../../assets/images/img2.jpg";
 import img3 from "../../../../../assets/images/img3.jpg";
-import Slideshow from "../../layouts/Slideshow/Slideshow";
+
+// styles
+import "./style.css";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
 
@@ -47,10 +50,13 @@ function Home() {
   return (
     <div className={containerCss}>
       <Navbar />
-      <h1 style={{ width: "85%" }}>
-        Visit your most favorite{" "}
-        <span className={spanTitle}>Museums Virtually</span>
-      </h1>
+      <div style={{ width: "100%", marginLeft: 50 }}>
+        <h2 style={{ width: "69%" }}>
+          Visit your most favorite{" "}
+          <span className={spanTitle}>Museums Virtually</span>
+        </h2>
+      </div>
+
       <Search />
       <TabView tabs={tabs} content={tabContent} />
       <Dock />

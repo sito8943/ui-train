@@ -34,6 +34,7 @@ const containerCss = css({
   alignItems: "center",
   justifyContent: "space-between",
   width: "85%",
+  margin: "auto",
 });
 
 export { searchCss, inputCss, filterButtonCss, containerCss };

@@ -2,7 +2,7 @@
 import { css } from "@emotion/css";
 
 const titleArea = css({
-  marginTop: 20,
+  margin: "20px auto auto auto",
   width: "80%",
 });
 

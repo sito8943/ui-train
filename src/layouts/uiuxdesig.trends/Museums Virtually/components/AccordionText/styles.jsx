@@ -3,6 +3,7 @@ import { css } from "@emotion/css";
 
 const accordionCss = css({
   width: "80%",
+  margin: "auto",
   transition: "all 200ms ease",
 });
 

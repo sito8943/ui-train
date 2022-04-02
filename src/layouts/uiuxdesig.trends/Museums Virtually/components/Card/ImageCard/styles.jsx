@@ -63,6 +63,7 @@ const imageCardCss = css({
   backgroundSize: "cover",
   borderRadius: 15,
   boxShadow: "0px 15px 50px -20px",
+  margin: "auto",
 });
 
 const markerButton = css({

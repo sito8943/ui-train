@@ -23,6 +23,7 @@ import {
   vrStarIcon,
 } from "../../components/Card/ImageCard/styles";
 import { titleArea, titleCss, starSpan } from "./styles";
+import Container from "../../layouts/Mobile/Container/Container";
 
 const tabs = ["Exhibitions", "Highlights", "Guided Tours", "Artworks"];
 
@@ -47,24 +48,31 @@ const Museums = () => {
   return (
     <Mobile>
       <MuseumNavbar />
-      <ImageCard title="Louvre Museum Paris" src={img1} stars={false} />
+      <Container>
+        <ImageCard title="Louvre Museum Paris" src={img1} stars={false} />
 
-      <div className={`${titleArea} ${imageCardTitleArea}`}>
-        <h4 className={titleCss}>Louvre Museum, Paris</h4>
-        <span className={starSpan}>
-          4.5 <BsFillStarFill className={vrStarIcon} />
-        </span>
-      </div>
-      <AccordionText
-        text={
-          "The Louvre, of the Louvre Museum, is the world's most-visited museum. The museum is open today from 9:00 AM to 6:00 PM"
-        }
-      />
-      <div>
-        <Slideshow small={true} content={smallContent} />
-      </div>
-
-      {/*<TabView tabs={tabs} content={tabContent} />*/}
+        <div className={`${titleArea} ${imageCardTitleArea}`}>
+          <h4 className={titleCss}>Louvre Museum, Paris</h4>
+          <span className={starSpan}>
+            4.5 <BsFillStarFill className={vrStarIcon} />
+          </span>
+        </div>
+        <AccordionText
+          text={
+            "The Louvre, of the Louvre Museum, is the world's most-visited museum. The museum is open today from 9:00 AM to 6:00 PM"
+          }
+        />
+        <div>
+          <Slideshow small={true} content={smallContent} />
+        </div>
+        <div>
+          <Slideshow small={true} content={smallContent} />
+        </div>
+        <div>
+          <Slideshow small={true} content={smallContent} />
+        </div>
+        {/*<TabView tabs={tabs} content={tabContent} />*/}
+      </Container>
       <Dock />
     </Mobile>
   );

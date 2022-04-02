@@ -21,4 +21,9 @@ const spanTitle = css({
   color: "#bdbbbb",
 });
 
-export { span, titleArea, titleCss, spanTitle };
+const centerRow = css({
+  display: "flex",
+  justifyContent: "center",
+});
+
+export { span, titleArea, titleCss, spanTitle, centerRow };

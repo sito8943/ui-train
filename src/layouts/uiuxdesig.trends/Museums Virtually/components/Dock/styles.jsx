@@ -5,8 +5,8 @@ const containerCss = css({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: 15,
-  marginTop: -10,
+  padding: "0 15px 15px 15px",
+  margin: "auto auto -10px auto",
   width: "85%",
 });
 

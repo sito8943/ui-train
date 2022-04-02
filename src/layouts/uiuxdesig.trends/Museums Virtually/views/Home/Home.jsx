@@ -8,6 +8,7 @@ import TabView from "../../layouts/TabView/TabView";
 import ImageCard from "../../components/Card/ImageCard/ImageCard";
 import Slideshow from "../../layouts/Slideshow/Slideshow";
 import Mobile from "../../layouts/Mobile/Mobile";
+import Container from "../../layouts/Mobile/Container/Container";
 
 // images
 import img1 from "../../../../../assets/images/img1.jpg";
@@ -16,7 +17,7 @@ import img3 from "../../../../../assets/images/img3.jpg";
 
 // styles
 import "./style.css";
-import { span, titleArea, titleCss, spanTitle } from "./styles";
+import { span, titleArea, titleCss, spanTitle, centerRow } from "./styles";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
 
@@ -35,18 +36,22 @@ function Home() {
   return (
     <Mobile>
       <Navbar />
-      <div className={titleArea}>
-        <h2 className={titleCss}>
-          Visit your most favorite{" "}
-          <span className={spanTitle}>Museums Virtually</span>
-        </h2>
-      </div>
+      <Container>
+        <div className={titleArea}>
+          <h2 className={titleCss}>
+            Visit your most favorite{" "}
+            <span className={spanTitle}>Museums Virtually</span>
+          </h2>
+        </div>
 
-      <Search />
-      <TabView tabs={tabs} content={tabContent} />
-      <span className={span} onClick={null}>
-        Show all
-      </span>
+        <Search />
+        <TabView tabs={tabs} content={tabContent} />
+        <div className={centerRow}>
+          <span className={span} onClick={null}>
+            Show all
+          </span>
+        </div>
+      </Container>
       <Dock />
     </Mobile>
   );

@@ -42,6 +42,7 @@ const ImageCard = (props) => {
     zIndex: 1,
     height: 42,
     cursor: "pointer",
+    marginBottom: -20,
     "&:hover": {
       background: "#abaaaa",
     },
@@ -74,11 +75,17 @@ const ImageCard = (props) => {
   });
 
   const imageCardCss = css({
-    height: 285,
+    height: 270,
+    width: 285,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    backgroundImage: `url(${src})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    borderRadius: 15,
+    boxShadow: "0px 15px 50px -20px",
   });
 
   const markerButton = css({
@@ -97,7 +104,7 @@ const ImageCard = (props) => {
 
   return (
     <div className={`${imageCardCss} image-card`}>
-      <ImageShimmer width={285} height={285} src={src} />
+      {/*<ImageShimmer width={285} height={285} src={src} />*/}
       <div className={titleArea}>
         <h4>{title}</h4>
         {!noMarker && (

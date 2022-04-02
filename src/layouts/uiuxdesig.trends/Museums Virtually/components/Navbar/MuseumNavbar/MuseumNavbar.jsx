@@ -4,11 +4,12 @@ import React from "react";
 import { BsChevronLeft, BsBookmarkDash } from "react-icons/bs";
 
 // styles
-import { notificationCss } from "../styles";
+import { notificationCss, container } from "../styles";
+import { museum } from "./styles";
 
 function MuseumNavbar() {
   return (
-    <div>
+    <div className={`${container} ${museum}`}>
       <button onClick={null} className={notificationCss}>
         <BsChevronLeft />
       </button>

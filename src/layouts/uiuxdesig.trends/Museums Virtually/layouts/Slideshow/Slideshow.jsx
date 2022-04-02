@@ -17,11 +17,29 @@ const Slideshow = (props) => {
     overflowX: "scroll",
   });
 
+  const container = css({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    overflow: "auto",
+  });
+
+  const span = css({
+    color: "#9f9d9d",
+    marginTop: -20,
+    cursor: "pointer",
+  });
+
   return (
-    <div className={slideshow} id="slideshow">
-      {content.map((item, i) => (
-        <Item index={i}>{item}</Item>
-      ))}
+    <div className={container}>
+      <div className={slideshow} id="slideshow">
+        {content.map((item, i) => (
+          <Item key={`item${i}`} index={i}>
+            {item}
+          </Item>
+        ))}
+      </div>
+      <span className={span}>Show all</span>
     </div>
   );
 };

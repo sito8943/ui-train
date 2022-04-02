@@ -21,8 +21,22 @@ const Item = (props) => {
     marginBottom: 10,
   });
 
+  const startCss = css({
+    marginRight: 10,
+  });
+
+  const middleCss = css({
+    margin: "0 10px",
+  });
+
   return (
-    <div className={`${item} ${index % 2 === 0 ? even : odd}`}>{children}</div>
+    <div
+      className={`${item} ${index !== 0 ? middleCss : startCss} ${
+        index % 2 === 0 ? even : odd
+      }`}
+    >
+      {children}
+    </div>
   );
 };
 

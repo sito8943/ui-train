@@ -24,7 +24,7 @@ import {
 } from "./styles";
 
 const ImageCard = (props) => {
-  const { title, noMarker, src } = props;
+  const { title, noMarker, src, stars } = props;
 
   const [toggle, setToggle] = useState(false);
 
@@ -38,7 +38,6 @@ const ImageCard = (props) => {
 
   return (
     <div className={`${imageCardCss} ${backgroundImage}`}>
-      {/*<ImageShimmer width={285} height={285} src={src} />*/}
       <div className={titleArea}>
         <h4 className={titleCss}>{title}</h4>
         {!noMarker && (
@@ -49,10 +48,14 @@ const ImageCard = (props) => {
       </div>
       <div className={vrArea}>
         <button className={vrButton}>Watch in VR</button>
-        <hr className={vrHr} />
-        <span className={starSpan}>
-          4.5 <BsFillStarFill className={vrStarIcon} />
-        </span>
+        {stars && (
+          <>
+            <hr className={vrHr} />
+            <span className={starSpan}>
+              4.5 <BsFillStarFill className={vrStarIcon} />
+            </span>
+          </>
+        )}
       </div>
     </div>
   );
@@ -60,11 +63,13 @@ const ImageCard = (props) => {
 
 ImageCard.defaultProps = {
   noMarker: false,
+  stars: true,
   title: "",
 };
 
 ImageCard.propTypes = {
   noMarker: PropTypes.bool,
+  stars: PropTypes.bool,
   title: PropTypes.string,
   src: PropTypes.string.isRequired,
 };

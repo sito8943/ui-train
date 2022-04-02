@@ -47,7 +47,8 @@ const starSpan = css({
 });
 
 const vrStarIcon = css({
-  marginLeft: "7px",
+  marginLeft: 7,
+  marginTop: -1,
   cursor: "pointer",
 });
 

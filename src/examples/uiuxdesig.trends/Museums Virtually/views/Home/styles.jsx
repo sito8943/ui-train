@@ -9,12 +9,12 @@ const span = css({
 });
 
 const titleArea = css({
-  width: "100%",
-  marginLeft: 50,
+  width: "85%",
+  margin: "auto",
 });
 
 const titleCss = css({
-  width: "69%",
+  width: "70%",
 });
 
 const spanTitle = css({
